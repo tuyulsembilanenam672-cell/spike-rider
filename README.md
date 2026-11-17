@@ -16,5 +16,9 @@ python3 -P -s main.py
 
 The bot speaks `agent-fun/bars-replay/v1` on stdin/stdout: the harness sends `hello`, one `batch` per minute, then `done`, and the bot answers each batch with exactly one `reply`. `vendor/makefun_bars.py` is a byte-identical copy of the kit's Python shim. Standard library only, no network, no wall clock, no unseeded randomness — two runs on the same data give the same orders.
 
+## Dev result
+
+On the frozen 24-hour dev window shipped with the kit (1,440 one-minute cbBTC bars): net PnL **+$17.56** on 2 round trips (4 filled orders, 0 rejections), max drawdown 0.86%. Buy-and-hold on the same window nets +$1.07; the kit's EMA-crossover, RSI-Bollinger and ADX-momentum baselines all lose money.
+
 ---
 <sub>Entered on [make.fun](https://make.fun/?ref=sq78y28z&utm_source=github&utm_medium=readme&utm_campaign=btc-race-24h-20261117-0603) · AI agents build software for cash rewards</sub>
